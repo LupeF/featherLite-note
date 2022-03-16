@@ -1,0 +1,84 @@
+nav{
+    background-color: rgb(172, 141, 172);
+    padding: 1em  2em;
+    @media(min-width:768px){
+        align-items: center;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    @media(min-width:1200px){
+        padding: 1em 5em;
+    }
+    .drop-menu{
+        fill: white;
+        width: 35px;
+        height: 35px;
+        @media(min-width:768px){
+            display: none;
+        }
+    }
+    
+    h2{
+        display: none;
+        @media(min-width:768px){
+            display: inline-block;
+            padding-left: .5em;
+            span{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+        }
+    }
+    .flex-icon{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 .5em;
+        align-items: center;
+    }
+    .list-items{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .feather{
+        width: 35px;
+        height:35px;
+        color: white
+
+    }
+    .download{
+        width: 35px;
+        height: 35px;
+        display: none;
+        @media(min-width:768px){
+            display: inline-block;
+            margin-left: 3em;
+        }
+    }
+    ul{
+        list-style-type: none;
+        display: none;
+        @media(min-width:768px){
+            display: flex;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+
+        }
+        li{
+            margin-left: 1em;
+            font-size: larger;
+        }
+        span{
+            border-right: solid 1px white;
+            padding-left: 1em;
+            
+        }
+    };
+    
+   
+}

@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    main{
+        margin: 0 1.5em 0 2em;
+        @media(min-width:1000px){
+            margin: 0 auto;
+            width: 90%;
+        }
+        @media(min-width:1300px){
+            margin: 0 auto;
+            width: 85%; 
+        }
+        @media(min-width:1600px){
+            margin: 0 auto;
+            width: 80%; 
+        }
+        h2{
+            color: gray;  
+         }
+        span{
+            color: black;
+        } 
+        p{
+            font-size: small;
+        }
+        .section-one{
+            @media(min-width: 768px){
+                display: grid;
+                grid-template-columns: 35% 35%;
+                justify-content: space-between;
+                h2{
+                    display: none;
+                }
+            }
+        }
+        .note{
+            border: solid 1px;
+            margin-bottom: 1em;
+            border-radius: 7px;
+            box-shadow:  1px 5px 5px rgb(172, 141, 172);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @media(min-width:768px){
+                margin-top: 1em;
+                height: 50px;  
+            }
+            input{
+                outline: none;
+                height: 49px;
+                width: 100%;
+                font-size: larger;
+            }
+
+            p{
+                padding-left: 2em;
+            }
+            .arrow{
+                fill: white;
+                background-color: rgb(172, 141, 172);
+                height: 50px;
+                width: 60px;
+                padding: .5em;
+                border-radius: 3px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @media(min-width: 768px){
+                    height: 48px;
+                    width: 50px;
+                }
+            }
+            
+            .cross{
+                color: rgb(172, 141, 172);
+                height: 30px;
+                padding-right: 1.5em;
+            }
+        } 
+        .dates-flex{
+            display: flex;
+            align-items: center;
+            span{
+                border-radius: 360px;
+                width: 10px;
+                height: 10px;
+                margin-right: 1em;  
+            }
+            .first-dot{
+                background-color: blue;
+            }
+            .second-dot{
+                background-color: plum;
+            }
+            .third-dot{
+                background-color: orange;
+            }
+        }
+        .margin{
+            margin-top: 2em;
+        }
+
+        .paragraphs{
+            background-color: lightgray;
+            border-radius: 3px;
+            padding: 1em;
+            margin-bottom: 1em;
+            font-size: small;
+        }
+        
+    }
+    .search{
+        width: 95%;
+    }
+}

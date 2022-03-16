@@ -1,0 +1,217 @@
+* {
+  font-family: "Antic Slab", serif;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: #ac8dac;
+  padding: 1em 2em;
+}
+@media (min-width: 768px) {
+  nav {
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (min-width: 1200px) {
+  nav {
+    padding: 1em 5em;
+  }
+}
+nav .drop-menu {
+  fill: white;
+  width: 35px;
+  height: 35px;
+}
+@media (min-width: 768px) {
+  nav .drop-menu {
+    display: none;
+  }
+}
+nav h2 {
+  display: none;
+}
+@media (min-width: 768px) {
+  nav h2 {
+    display: inline-block;
+    padding-left: 0.5em;
+  }
+  nav h2 span {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+}
+nav .flex-icon {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5em;
+  align-items: center;
+}
+nav .list-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .feather {
+  width: 35px;
+  height: 35px;
+  color: white;
+}
+nav .download {
+  width: 35px;
+  height: 35px;
+  display: none;
+}
+@media (min-width: 768px) {
+  nav .download {
+    display: inline-block;
+    margin-left: 3em;
+  }
+}
+nav ul {
+  list-style-type: none;
+  display: none;
+}
+@media (min-width: 768px) {
+  nav ul {
+    display: flex;
+  }
+}
+nav ul a {
+  text-decoration: none;
+  color: white;
+}
+nav ul li {
+  margin-left: 1em;
+  font-size: larger;
+}
+nav ul span {
+  border-right: solid 1px white;
+  padding-left: 1em;
+}
+
+body {
+  margin: 0;
+}
+body main {
+  margin: 0 1.5em 0 2em;
+}
+@media (min-width: 1000px) {
+  body main {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+@media (min-width: 1300px) {
+  body main {
+    margin: 0 auto;
+    width: 85%;
+  }
+}
+@media (min-width: 1600px) {
+  body main {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+body main h2 {
+  color: gray;
+}
+body main span {
+  color: black;
+}
+body main p {
+  font-size: small;
+}
+@media (min-width: 768px) {
+  body main .section-one {
+    display: grid;
+    grid-template-columns: 35% 35%;
+    justify-content: space-between;
+  }
+  body main .section-one h2 {
+    display: none;
+  }
+}
+body main .note {
+  border: solid 1px;
+  margin-bottom: 1em;
+  border-radius: 7px;
+  box-shadow: 1px 5px 5px #ac8dac;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  body main .note {
+    margin-top: 1em;
+    height: 50px;
+  }
+}
+body main .note input {
+  outline: none;
+  height: 49px;
+  width: 100%;
+  font-size: larger;
+}
+body main .note p {
+  padding-left: 2em;
+}
+body main .note .arrow {
+  fill: white;
+  background-color: #ac8dac;
+  height: 50px;
+  width: 60px;
+  padding: 0.5em;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  body main .note .arrow {
+    height: 48px;
+    width: 50px;
+  }
+}
+body main .note .cross {
+  color: #ac8dac;
+  height: 30px;
+  padding-right: 1.5em;
+}
+body main .dates-flex {
+  display: flex;
+  align-items: center;
+}
+body main .dates-flex span {
+  border-radius: 360px;
+  width: 10px;
+  height: 10px;
+  margin-right: 1em;
+}
+body main .dates-flex .first-dot {
+  background-color: blue;
+}
+body main .dates-flex .second-dot {
+  background-color: plum;
+}
+body main .dates-flex .third-dot {
+  background-color: orange;
+}
+body main .margin {
+  margin-top: 2em;
+}
+body main .paragraphs {
+  background-color: lightgray;
+  border-radius: 3px;
+  padding: 1em;
+  margin-bottom: 1em;
+  font-size: small;
+}
+body .search {
+  width: 95%;
+}
+
+/*# sourceMappingURL=style.css.map */
