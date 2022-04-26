@@ -29,3 +29,4 @@ When downloading this project, you'll receive a folder called `featherLITE`. Ins
  Do a great job and the design team will have `featherPRO` mockups for you to design next and your boss may offer you a promotion. ;) Happy coding!# feather-lite-blog
 # feather-lite-blog
 # feather-lite-blog
+# featherLite-note
