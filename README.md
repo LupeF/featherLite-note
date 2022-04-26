@@ -30,3 +30,4 @@ When downloading this project, you'll receive a folder called `featherLITE`. Ins
 # feather-lite-blog
 # feather-lite-blog
 # featherLite-note
+# featherLite-note
