@@ -179,6 +179,7 @@ body main .note .arrow {
 body main .note .cross {
   color: #ac8dac;
   height: 30px;
+  margin-left: auto;
   padding-right: 1.5em;
 }
 body main .dates-flex {
