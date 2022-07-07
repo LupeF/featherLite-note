@@ -1,0 +1,38 @@
+//******************
+//styles for JS Note
+//******************
+@mixin container-styles (
+$bck-color,
+$marg,
+$pad,
+$widt,
+$brdr,
+) {
+    background-color:$bck-color;
+    margin:$marg;
+    padding:$pad;
+    width:$widt;
+    border:$brdr;
+    border-radius: 5px;
+}
+@mixin circle-styles {
+    border-radius: 50%;
+    border: solid 1px black;
+    height: 15px;
+    width: 15px;
+}
+@mixin flexbox (
+$disp,
+$just,
+$align){
+    display: $disp;
+    justify-content: $just;
+    align-items: $align;
+}
+@mixin width-height ($width,$height){
+    width:$width;
+    height:$height;
+}
+//****************
+//nav styles
+//****************

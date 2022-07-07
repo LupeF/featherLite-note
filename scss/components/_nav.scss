@@ -2,20 +2,15 @@ nav{
     background-color: rgb(172, 141, 172);
     padding: 1em  2em;
     @media(min-width:768px){
-        align-items: center;
+        @include flexbox (flex, space-between, center);
         color: white;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
     }
     @media(min-width:1200px){
         padding: 1em 5em;
     }
     .drop-menu{
+        @include width-height (35px,35px);
         fill: white;
-        width: 35px;
-        height: 35px;
         @media(min-width:768px){
             display: none;
         }
@@ -32,26 +27,20 @@ nav{
         }
     }
     .flex-icon{
-        display: flex;
-        justify-content: space-between;
+        @include flexbox (flex, space-between, center);
         padding: 0 .5em;
-        align-items: center;
+        
     }
     .list-items{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flexbox (flex, space-between, center);
     }
     
     .feather{
-        width: 35px;
-        height:35px;
-        color: white
-
+        @include width-height (35px,35px);
+        color: white;
     }
     .download{
-        width: 35px;
-        height: 35px;
+        @include width-height (35px,35px);
         display: none;
         @media(min-width:768px){
             display: inline-block;
@@ -62,12 +51,11 @@ nav{
         list-style-type: none;
         display: none;
         @media(min-width:768px){
-            display: flex;
+            @include flexbox (flex,null, null);
         }
         a{
             text-decoration: none;
             color: white;
-
         }
         li{
             margin-left: 1em;
@@ -76,9 +64,6 @@ nav{
         span{
             border-right: solid 1px white;
             padding-left: 1em;
-            
         }
     };
-    
-   
 }

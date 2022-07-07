@@ -4,16 +4,9 @@ body{
         margin: 0 1.5em 0 2em;
         @media(min-width:1000px){
             margin: 0 auto;
-            width: 90%;
+            width: 80%;
         }
-        @media(min-width:1300px){
-            margin: 0 auto;
-            width: 85%; 
-        }
-        @media(min-width:1600px){
-            margin: 0 auto;
-            width: 80%; 
-        }
+       
         h2{
             color: gray;  
          }
@@ -23,6 +16,7 @@ body{
         p{
             font-size: small;
         }
+ //Search Input and Create Note Button Styles
         .section-one{
             @media(min-width: 768px){
                 display: grid;
@@ -34,21 +28,18 @@ body{
             }
         }
         .note{
+            @include flexbox (flex,space-between,center);
             border: solid 1px;
             margin-bottom: 1em;
             border-radius: 7px;
             box-shadow:  1px 5px 5px rgb(172, 141, 172);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             @media(min-width:768px){
                 margin-top: 1em;
                 height: 50px;  
             }
             input{
+                @include width-height (100%,49px);
                 outline: none;
-                height: 49px;
-                width: 100%;
                 font-size: larger;
             }
 
@@ -56,18 +47,14 @@ body{
                 padding-left: 2em;
             }
             .arrow{
+                @include flexbox (flex,center,center);
+                @include width-height (60px,50px);
                 fill: white;
                 background-color: rgb(172, 141, 172);
-                height: 50px;
-                width: 60px;
                 padding: .5em;
                 border-radius: 3px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 @media(min-width: 768px){
-                    height: 48px;
-                    width: 50px;
+                    @include width-height (50px,48px);
                 }
             }
             
@@ -77,14 +64,13 @@ body{
                 margin-left: auto;
                 padding-right: 1.5em;
             }
-        } 
+        }
+        
         .dates-flex{
-            display: flex;
-            align-items: center;
+            @include flexbox (flex,null,center);
             span{
+                @include width-height (10px,10px);
                 border-radius: 360px;
-                width: 10px;
-                height: 10px;
                 margin-right: 1em;  
             }
             .first-dot{
@@ -96,9 +82,6 @@ body{
             .third-dot{
                 background-color: orange;
             }
-        }
-        .margin{
-            margin-top: 2em;
         }
 
         .paragraphs{
@@ -112,5 +95,13 @@ body{
     }
     .search{
         width: 95%;
+    }
+    .grid{
+        @media(min-width:1300px){
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 3em;
+            margin-top: 1.5em;
+        }
     }
 }
