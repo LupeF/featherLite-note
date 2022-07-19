@@ -2,7 +2,7 @@ const noteDiv = document.getElementById('note-div');
 
 
 document.getElementById('note-button').addEventListener ('click', (e)=> {
-    const cancelBtn = document.getElementById('cancel');
+    // const cancelBtn = document.getElementById('cancel');
     if(noteDiv.innerHTML == ""){
         noteDiv.innerHTML = 
         `<div class="note-container">
@@ -35,9 +35,9 @@ document.getElementById('note-button').addEventListener ('click', (e)=> {
                     <button>Post Note</button>
                     <button id="cancel">Cancel</button>
         </div>`;
-    }
-    if(){
-
-    }
+    } 
 });
+document.getElementById('cancel').addEventListener('click',()=>{
+    noteDiv.style.display = 'none';
+})
 
