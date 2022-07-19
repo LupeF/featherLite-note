@@ -214,6 +214,8 @@ body .search {
   width: 90%;
   border: solid black 1px;
   border-radius: 5px;
+  width: 45%;
+  min-width: 500px;
 }
 .note-container > h1 {
   text-align: center;
@@ -379,6 +381,10 @@ button {
   background-color: #ac8dac;
   color: white;
   border-radius: 5px;
+}
+
+button + button {
+  margin-left: 8px;
 }
 
 /*# sourceMappingURL=style.css.map */

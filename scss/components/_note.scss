@@ -1,5 +1,7 @@
 .note-container {
     @include container-styles (whitesmoke, 1em auto 0, 0 2em 1em, 90%, solid black 1px);
+    width: 45%;
+    min-width: 500px;
     & > h1{
         text-align: center;
     }
@@ -99,4 +101,7 @@ button{
     background-color:rgb(172, 141, 172);
     color: white;
     border-radius: 5px;
+}
+button + button{
+    margin-left:  8px;
 }
