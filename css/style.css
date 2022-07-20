@@ -216,6 +216,13 @@ body .search {
   border-radius: 5px;
   width: 45%;
   min-width: 500px;
+  position: absolute;
+  left: 400px;
+  z-index: 2;
+}
+.note-container::before {
+  opacity: 0.3;
+  background-color: #514f4f;
 }
 .note-container > h1 {
   text-align: center;

@@ -35,9 +35,10 @@ document.getElementById('note-button').addEventListener ('click', (e)=> {
                     <button>Post Note</button>
                     <button id="cancel">Cancel</button>
         </div>`;
-    } 
-});
+    }
 document.getElementById('cancel').addEventListener('click',()=>{
     noteDiv.style.display = 'none';
-})
+    }) 
+});
+
 
