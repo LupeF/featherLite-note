@@ -207,6 +207,18 @@ body .search {
   }
 }
 
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(80, 79, 80, 0.9);
+}
+
 .note-container {
   background-color: whitesmoke;
   margin: 1em auto 0;
@@ -217,12 +229,7 @@ body .search {
   width: 45%;
   min-width: 500px;
   position: absolute;
-  left: 400px;
   z-index: 2;
-}
-.note-container::before {
-  opacity: 0.3;
-  background-color: #514f4f;
 }
 .note-container > h1 {
   text-align: center;
@@ -383,10 +390,10 @@ textarea {
 }
 
 button {
-  width: 9em;
-  height: 3em;
   background-color: #ac8dac;
   color: white;
+  width: 9em;
+  height: 3em;
   border-radius: 5px;
 }
 

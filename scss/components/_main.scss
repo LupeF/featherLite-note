@@ -16,7 +16,9 @@ body{
         p{
             font-size: small;
         }
+//*********************************************/
  //Search Input and Create Note Button Styles
+ //*********************************************/
         .section-one{
             @media(min-width: 768px){
                 display: grid;
@@ -65,7 +67,9 @@ body{
                 padding-right: 1.5em;
             }
         }
-        
+//*********************************************/
+// Content Section
+//*********************************************/
         .dates-flex{
             @include flexbox (flex,null,center);
             span{

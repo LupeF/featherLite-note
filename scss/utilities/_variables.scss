@@ -1,3 +1,9 @@
+//********************************
+//rgba Note Container background Color and Opacity Alpha
+//********************************
+$Bckg-color:rgb(80, 79, 80,.9);
+$alpha: .9;
+
 //*********************
 //colors for note labels
 //*********************
@@ -19,4 +25,10 @@ $color-15:rgb(72, 110, 197);
 $color-16:rgb(255, 255, 255);
 $color-17:rgb(0, 0, 0);
 $color-18:rgb(126, 127, 130);
+
+//********************************
+// Note Button color styles
+//********************************
+$Btn-bckg: rgb(172, 141, 172);
+$Btn-color: white;
 

@@ -1,11 +1,14 @@
+//*******************************************************/
+//Creates a New Note 
+//*****************************************************/
 const noteDiv = document.getElementById('note-div');
-
-
 document.getElementById('note-button').addEventListener ('click', (e)=> {
-    // const cancelBtn = document.getElementById('cancel');
-    if(noteDiv.innerHTML == ""){
+    if(noteDiv.style.display == 'none'){
+        noteDiv.style.display = 'contents';
+    } else if(noteDiv.innerHTML == ""){
         noteDiv.innerHTML = 
-        `<div class="note-container">
+        `<div id="container">
+            <div class="note-container">
                     <h1> Create Note </h1>
                     <p> Choose a Label </p>
                     <div class="color-container">
@@ -34,11 +37,15 @@ document.getElementById('note-button').addEventListener ('click', (e)=> {
                     <textarea></textarea>
                     <button>Post Note</button>
                     <button id="cancel">Cancel</button>
+            </div>
         </div>`;
     }
+//******************************************************************/
+// Closes Note when Canceled
+//****************************************************************/
 document.getElementById('cancel').addEventListener('click',()=>{
     noteDiv.style.display = 'none';
-    }) 
+    })  
 });
 
 

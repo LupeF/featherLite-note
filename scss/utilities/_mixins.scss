@@ -33,6 +33,14 @@ $align){
     width:$width;
     height:$height;
 }
-//****************
-//nav styles
-//****************
+
+//******************************
+// Note Button  Styles
+//****************************
+@mixin Btn-styles {
+    background-color: $Btn-bckg;
+    color: $Btn-color;
+    width: 9em;
+    height: 3em;
+    border-radius: 5px;
+}
