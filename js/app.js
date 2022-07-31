@@ -4,7 +4,7 @@
 const noteDiv = document.getElementById('note-div');
 document.getElementById('note-button').addEventListener ('click', (e)=> {
     if(noteDiv.style.display == 'none'){
-        noteDiv.style.display = 'contents';
+        noteDiv.removeAttribute('style');
     } else if(noteDiv.innerHTML == ""){
         noteDiv.innerHTML = 
         `<div id="container">
@@ -32,10 +32,10 @@ document.getElementById('note-button').addEventListener ('click', (e)=> {
                         <div class="color-18"></div>
                     </div>
                     <p> Give your Note a title </p>
-                    <input></input>
+                    <input id="title-Heading"></input>
                     <p>Write down your note</p>
-                    <textarea></textarea>
-                    <button>Post Note</button>
+                    <textarea id="note-value"></textarea>
+                    <button id="post">Post Note</button>
                     <button id="cancel">Cancel</button>
             </div>
         </div>`;
@@ -43,9 +43,37 @@ document.getElementById('note-button').addEventListener ('click', (e)=> {
 //******************************************************************/
 // Closes Note when Canceled
 //****************************************************************/
-document.getElementById('cancel').addEventListener('click',()=>{
-    noteDiv.style.display = 'none';
-    })  
+    document.getElementById('cancel').addEventListener('click',()=>{
+        noteDiv.style.display = 'none';
+    })
+//********************************/
+// Appends note to the display
+//********************************/
+    const title = document.getElementById('title-Heading')
+    const note = document.getElementById('note-value');
+    document.getElementById('post').addEventListener('click',()=>{
+        const section = document.createElement('section');
+        const h1 = document.createElement('h1').textContent = title.value; //adds h1 heading to const
+        const p = document.createElement('p').textContent = note.value;  //adds h1 heading to const
+        section.classList.add("paragraphs");  //sets clss to node
+        section.innerHTML = `
+            <div class="dates-flex">
+                <span class="first-dot"></span>
+                <p> June 20, 2021</p>
+            </div>
+            <h1>${h1}</h1>
+            <p>${p}</p>
+        `;
+        document.querySelector('.grid').prepend(section);
+        noteDiv.style.display = 'none';
+        if(noteDiv.style.display === 'none'){  
+            h1.textContent = ""; //erases Content
+            p.textContent = "";  //erases Content 
+        }
+    });
 });
+
+
+
 
 
