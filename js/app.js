@@ -2,10 +2,11 @@
 //Creates a New Note 
 //*****************************************************/
 const noteDiv = document.getElementById('note-div');
-document.getElementById('note-button').addEventListener ('click', (e)=> {
-    if(noteDiv.style.display == 'none'){
+document.getElementById('note-button').addEventListener ('click', ()=> {
+    if(noteDiv.style.display === 'none'){
         noteDiv.removeAttribute('style');
-    } else if(noteDiv.innerHTML == ""){
+        noteDiv.innerHTML = ""; 
+    } else if(noteDiv.innerHTML === ""){
         noteDiv.innerHTML = 
         `<div id="container">
             <div class="note-container">
@@ -39,18 +40,14 @@ document.getElementById('note-button').addEventListener ('click', (e)=> {
                 <button id="cancel">Cancel</button>
             </div>
         </div>`;
-    }
-//******************************************************************/
-// Closes Note when Canceled
-//****************************************************************/
-    document.getElementById('cancel').addEventListener('click',()=>{
-        noteDiv.style.display = 'none';
-    })
+    };
 //********************************/
 // Appends note to the display
 //********************************/
     const title = document.getElementById('title-Heading');
     const note = document.getElementById('note-value');
+    const h1 = document.createElement('h1').textContent = title.value; //adds h1 heading to const
+    const p = document.createElement('p').textContent = note.value;  //adds h1 heading to const
     document.getElementById('post').addEventListener('click',()=>{
         const section = document.createElement('section');
         const h1 = document.createElement('h1').textContent = title.value; //adds h1 heading to const
@@ -68,12 +65,17 @@ document.getElementById('note-button').addEventListener ('click', (e)=> {
         noteDiv.style.display = 'none';
         if(noteDiv.style.display === 'none'){ 
            title.value = ""; // Erases Content
-            note.value = "";  //Erases Content 
-        }
+            note.value = "";  //Erases Content
+           
+        } 
     });
+    //******************************************************************/
+// Closes Note when Canceled
+//****************************************************************/
+document.getElementById('cancel').addEventListener('click',()=>{
+    title.value = "";
+    p.value = "";
+    noteDiv.style.display = 'none';
+    
+})
 });
-
-
-
-
-
