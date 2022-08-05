@@ -3,11 +3,8 @@
 //*****************************************************/
 const noteDiv = document.getElementById('note-div');
 document.getElementById('note-button').addEventListener ('click', ()=> {
-    if(noteDiv.style.display === 'none'){
-        noteDiv.removeAttribute('style');
-        noteDiv.innerHTML = ""; 
-    } else if(noteDiv.innerHTML === ""){
-        noteDiv.innerHTML = 
+    noteDiv.style.display = '';
+    noteDiv.innerHTML = 
         `<div id="container">
             <div class="note-container">
                 <h1> Create Note </h1>
@@ -40,42 +37,38 @@ document.getElementById('note-button').addEventListener ('click', ()=> {
                 <button id="cancel">Cancel</button>
             </div>
         </div>`;
-    };
+    
 //********************************/
 // Appends note to the display
 //********************************/
     const title = document.getElementById('title-Heading');
     const note = document.getElementById('note-value');
-    const h1 = document.createElement('h1').textContent = title.value; //adds h1 heading to const
-    const p = document.createElement('p').textContent = note.value;  //adds h1 heading to const
-    document.getElementById('post').addEventListener('click',()=>{
-        const section = document.createElement('section');
-        const h1 = document.createElement('h1').textContent = title.value; //adds h1 heading to const
-        const p = document.createElement('p').textContent = note.value;  //adds h1 heading to const
-        section.classList.add("paragraphs");  //sets clss to node
-        section.innerHTML = `
-            <div class="dates-flex">
-                <span class="first-dot"></span>
-                <p> June 20, 2021</p>
-            </div>
-            <h1>${h1}</h1>
-            <p>${p}</p>
-        `;
-        document.querySelector('.grid').prepend(section);
-        noteDiv.style.display = 'none';
-        if(noteDiv.style.display === 'none'){ 
-           title.value = ""; // Erases Content
-            note.value = "";  //Erases Content
-           
-        } 
-    });
+    const post = document.getElementById('post');
+    const cancel = document.getElementById('cancel');
+    if (post && cancel){ //checks for existance when on display:none, since inserted dynamically.
+        post.addEventListener('click',()=>{
+            const section = document.createElement('section');
+            document.querySelector('.grid').prepend(section);
+            section.classList.add("paragraphs");  //sets clss to node
+            section.innerHTML = `
+                <div class="dates-flex">
+                    <span class="first-dot"></span>
+                    <p> June 20, 2021</p>
+                </div>
+                <h1>${title.value}</h1>
+                <p>${note.value}</p>
+            `;
+            if (title.value !== "" && note.value !== ""){
+                noteDiv.style.display = 'none';
+            }
+        });
     //******************************************************************/
-// Closes Note when Canceled
-//****************************************************************/
-document.getElementById('cancel').addEventListener('click',()=>{
-    title.value = "";
-    p.value = "";
-    noteDiv.style.display = 'none';
-    
-})
+    // Closes Note when Canceled
+    //****************************************************************/
+        cancel.addEventListener('click',()=>{
+        title.value = "";
+        note.value = "";
+        noteDiv.style.display = 'none';
+        });
+    }  
 });
